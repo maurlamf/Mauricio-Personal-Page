@@ -1,0 +1,11 @@
+{% include header.html %}
+
+<div class="row-fluid">
+  <div class="span8">
+    <h2>{{ page.title }}</h2>
+    <p class="light">{{ page.date | date_to_long_string }}</p>
+
+    {{ content }}
+  </div>
+</div>
+  {% include footer.html %}
