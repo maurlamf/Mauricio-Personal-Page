@@ -11,25 +11,35 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/darkstrap.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Amatic+SC|Roboto+Condensed:300,400|Nova+Round|Arimo|Helvetica+Neue:200,300' rel='stylesheet' type='text/css'>         
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC|Roboto+Condensed:300,400|Lato:200,300,400,700|Playfair+Display|Helvetica+Neue:200,300' rel='stylesheet' type='text/css'>         
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-$(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 200) {
-        $('#mrtitle').fadeIn();
-    } else {
-        $('#mrtitle').fadeOut();
-    }
-
-})
-</script>
+    $(document).scroll(function (event) {
+        var y = $(this).scrollTop();
+        if (y > 200) {
+            $('.icons2').fadeIn();
+        } else {
+            $('.icons2').fadeOut();
+        }
+    })
+    </script>
+    <script type="text/javascript">
+    $(document).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y > 200) {
+            $('#mrtitle').fadeIn();
+        } else {
+            $('#mrtitle').fadeOut();
+        }
+    })
+    </script>
     <script>
     function sticky_relocate() {
       var window_top = $(window).scrollTop();
@@ -58,11 +68,10 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
 </head>
 <div class ="title">
     <a href="../">
-        <p class="titletext">{{ site.name }}</p>
+        <p class="titletext">Mauricio <b>Rivera</b></p>
     </a>
-    <p id="abouttext">A few semi-interesting things</p>  
     <div class="icons">
-        <p id="antisocial"{{ page.title }}>Anti-Social Profiles:</p>
+        <p id="antisocial"{{ page.title }}>ANTI-SOCIAL PROFILES:</p>
         <a href="http://www.linkedin.com/pub/mauricio-rivera/8/55b/836/">
             <i class="icon icon-linkedin-sign"></i></a>
             <a href="http://www.twitter.com/maurrivera">
@@ -71,19 +80,29 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
                 <a href="https://plus.google.com/116185961057288822467?rel=author">
                     <i class="icon icon-google-plus-sign"></i></a>
                 </div>
+                <p id="abouttext">A few semi-interesting things</p>  
             </div>        
         </div>
         <div id="sticky-anchor">
             <div id="sticky">
                 <div class="block">
-                    <div id="mrtitle">Mauricio Rivera</div>
+                    <div id="mrtitle">MR</div>
                 </div>
-                <a href="../about/index.html">
-                    <p class="Nav">About Me</p></a>
-                    <a href="../">
-                        <p class="Nav">Blog</p></a>
-                        <a href="../resume/index.html">
-                            <p class="Nav">Résumé/CV</p><a>
-                        </div>
-                    </div>
+                <a href ="/about/index.html" class = "navhover">
+                    <p class="Nav">about</p></a>
+                    <a href="/" class = "navhover">
+                        <p class="Nav">blog</p></a>
+                        <a href="/resume/index.html" class = "navhover">
+                            <p class="Nav">résumé/cv</p><a>
+                            <div class="icons2">
+                                <a href="http://www.linkedin.com/pub/mauricio-rivera/8/55b/836/" class = "navhover">
+                                    <i class="icon icon-linkedin-sign"></i></a>
+                                    <a href="http://www.twitter.com/maurrivera" class = "navhover">
+                                        <i class="icon icon-twitter"></i></a>
+                                        <i class="icon icon-facebook"></i>
+                                        <a href="https://plus.google.com/116185961057288822467?rel=author" class = "navhover">
+                                            <i class="icon icon-google-plus-sign"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
 

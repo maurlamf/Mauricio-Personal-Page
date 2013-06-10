@@ -6,31 +6,40 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Mauricio Rivera</title>
+    <title>mauricio rivera</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/darkstrap.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Amatic+SC|Roboto+Condensed:300,400|Nova+Round|Arimo|Helvetica+Neue:200,300' rel='stylesheet' type='text/css'>         
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC|Roboto+Condensed:300,400|Lato:200,300,400,700|Playfair+Display|Helvetica+Neue:200,300' rel='stylesheet' type='text/css'>         
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-$(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 200) {
-        event.preventDefault();
-        $('#mrtitle').fadeIn();
-    } else {
-        $('#mrtitle').fadeOut();
-    }
-
-})
-</script>
+    $(document).scroll(function (event) {
+        var y = $(this).scrollTop();
+        if (y > 200) {
+            $('.icons2').fadeIn();
+        } else {
+            $('.icons2').fadeOut();
+        }
+    })
+    </script>
+    <script type="text/javascript">
+    $(document).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y > 200) {
+            $('#mrtitle').fadeIn();
+        } else {
+            $('#mrtitle').fadeOut();
+        }
+    })
+    </script>
     <script>
     function sticky_relocate() {
       var window_top = $(window).scrollTop();
@@ -59,11 +68,10 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
 </head>
 <div class ="title">
     <a href="../">
-        <p class="titletext">Mauricio Rivera</p>
+        <p class="titletext">Mauricio <b>Rivera</b></p>
     </a>
-    <p id="abouttext">A few semi-interesting things</p>  
     <div class="icons">
-        <p id="antisocial"About Me>Anti-Social Profiles:</p>
+        <p id="antisocial"About Me>ANTI-SOCIAL PROFILES:</p>
         <a href="http://www.linkedin.com/pub/mauricio-rivera/8/55b/836/">
             <i class="icon icon-linkedin-sign"></i></a>
             <a href="http://www.twitter.com/maurrivera">
@@ -72,32 +80,61 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
                 <a href="https://plus.google.com/116185961057288822467?rel=author">
                     <i class="icon icon-google-plus-sign"></i></a>
                 </div>
+                <p id="abouttext">A few semi-interesting things</p>  
             </div>        
         </div>
         <div id="sticky-anchor">
             <div id="sticky">
                 <div class="block">
-                    <div id="mrtitle">Mauricio Rivera</div>
+                    <div id="mrtitle">MR</div>
                 </div>
-                <a href="../about/index.html">
-                    <p class="Nav">About Me</p></a>
-                    <a href="../">
-                        <p class="Nav">Blog</p></a>
-                        <a href="../resume/index.html">
-                            <p class="Nav">Résumé/CV</p><a>
-                        </div>
-                    </div>
+                <a href ="/about/index.html" class = "navhover">
+                    <p class="Nav">about</p></a>
+                    <a href="/" class = "navhover">
+                        <p class="Nav">blog</p></a>
+                        <a href="/resume/index.html" class = "navhover">
+                            <p class="Nav">résumé/cv</p><a>
+                            <div class="icons2">
+                                <a href="http://www.linkedin.com/pub/mauricio-rivera/8/55b/836/" class = "navhover">
+                                    <i class="icon icon-linkedin-sign"></i></a>
+                                    <a href="http://www.twitter.com/maurrivera" class = "navhover">
+                                        <i class="icon icon-twitter"></i></a>
+                                        <i class="icon icon-facebook"></i>
+                                        <a href="https://plus.google.com/116185961057288822467?rel=author" class = "navhover">
+                                            <i class="icon icon-google-plus-sign"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 <div class="limiter">
-<h1 id='about_me_in__125_characters'>About Me in &lt; 125 characters:</h1>
+<h1 id='about'>About</h1>
 
-<p>SF Native, LA dweller. @SFGiants @Warriors &amp; @49ers fan. @LoyolaMarymount &amp; @ucsantabarbara grad. Studying for @CFAinstitute.</p>
+<h3 id='hi_my_name_is_mauricio_rivera_and_im_a_san_francisco_native_with_interests_in_finance_technology_development_user_interfaces_and_sports'>Hi my name is <strong>Mauricio Rivera</strong> and I&#8217;m a San Francisco native with interests in finance, technology, development, user interfaces, and sports.</h3>
 
-<h1 id='about_me_in__125_characters'>About me in &gt; 125 characters:</h1>
+<p>I&#8217;m currently living in Los Angeles pushing forward some personal projects in design and technology and enjoying the summer weather.</p>
+
+<p>I have worked on a number of cool projects. Most recently I worked at <a href='http://www.goldsilver.com'>GoldSilver.com</a>, a global gold and silver dealership, where I ran technology, user interface, and finance teams. I have done work as a financial and technology consultant, and previously I worked at Loyola Marymount University.</p>
+
+<p>I graduated from UC Santa Barbara with a BA and Loyola Marymount University where I earned an MBA with dual emphases in Finance and Decision Science. I am currently a <a href='http://www.cfainstitute.org'>CFA</a> Level 3 candidate.</p>
+
+<p>I&#8217;m interested in chess, sports, technology, numbers, films, and literature. Some of my favorite things are <a href='http://getpocket.com'>Pocket</a>, the San Francisco Giants, Barça FC, USMNT, <a href='http://github.com'>github</a>, the Golden State Warriors, the San Francisco 49ers, <a href='http://www.songza.com'>Songza</a>, Neal Stephenson books, <a href='http://longnow.org/'>the Long Now Foundation</a>, and Mexican food.</p>
+
+<h1 id='contact'>Contact</h1>
+
+<p>Connect with me via social media or <a href='mailto:maurrivera@gmail.com'>say hi</a> via email.</p>
+
+<h1 id='colophon'>Colophon</h1>
+
+<p>This website was created on a MacBook Air with <a href='https://www.google.com/intl/en/chrome/browser/'>Google Chrome</a> and <a href='http://www.sublimetext.com/2'>Sublime Text 2</a>. The site is published with <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='http://html5boilerplate.com/'>HTML5 Boilerplate</a>. The sites are composed in Markdown.</p>
+
+<p>The types are set in Lato and Roboto Condensed, both served by <a href='http://www.google.com/fonts/'>Google Web Fonts</a>.</p>
+<hr />
 
 <h2>Recent Posts</h>
 <div>
+  
+    <div><a href="/2013/06/10/building-blog-jekyll-html5boilerplate-for-noobs/">Building a Blog with Jekyll for Newbies</a></div>
   
     <div><a href="/2013/06/07/what-im-listening-to/">What I'm Listening To</a></div>
   
