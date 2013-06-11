@@ -14,12 +14,29 @@
     <link rel="stylesheet" href="/css/darkstrap.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script language="javascript" src="/tweet/jquery.tweet.js" type="text/javascript"></script>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Amatic+SC|Roboto+Condensed:300,400|Lato:200,300,400,700|Playfair+Display|Helvetica+Neue:200,300' rel='stylesheet' type='text/css'>         
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script type='text/javascript'>
+    jQuery(function($){
+        $(".tweet").tweet({
+            username: "maurrivera",
+            join_text: "auto",
+            avatar_size: 80,
+            count: 3,
+            auto_join_text_default: " I said,", 
+            auto_join_text_ed: " I",
+            auto_join_text_ing: " I was",
+            auto_join_text_reply: " I replied to",
+            auto_join_text_url: " I was checking out",
+            loading_text: "cool things being loaded..."
+        });
+    });
+</script>
     <script type="text/javascript">
     $(document).scroll(function (event) {
         var y = $(this).scrollTop();
@@ -71,7 +88,7 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
         <p class="titletext">Mauricio <b>Rivera</b></p>
     </a>
     <div class="icons">
-        <p id="antisocial"Building a Blog with Jekyll for Newbies>ANTI-SOCIAL PROFILES:</p>
+        <p id="antisocial"Building a Blog/Personal Page with Jekyll for Newbies>ANTI-SOCIAL PROFILES:</p>
         <a href="http://www.linkedin.com/pub/mauricio-rivera/8/55b/836/">
             <i class="icon icon-linkedin-sign"></i></a>
             <a href="http://www.twitter.com/maurrivera">
@@ -110,37 +127,69 @@ ga('create','UA-XXXXX-X');ga('send','pageview');
 
 <div class="limiter">
   <div class="span8">
-    <h1>Building a Blog with Jekyll for Newbies</h1>
+    <h1>Building a Blog/Personal Page with Jekyll for Newbies</h1>
 
-    <p>keytar +1 anim, sapiente fashion axe seitan selfies nulla. Before they sold out cred ethnic veniam quis. Assumenda pariatur aliquip, stumptown keytar PBR sed Truffaut mumblecore Tonx pork belly put a bird on it nisi pitchfork.</p>
+    <p>I was inspired to build this blog by Werner Vogels&#8217; <a href='http://www.allthingsdistributed.com/'>All Things Distributed</a>. For those who are unfamiliar with Vogels, he&#8217;s Amazon&#8217;s CTO and he has a lot of interesting things to say. I noticed that he had build his blog with <a href='http://jekyllrb.com/'>Jekyll</a>, which was built by one github&#8217;s founders. I had never built anything of any significance, but the fact that Jekyll seemed much more elegant and simple than Wordpress or Drupal got me excited to build something even despite my impressive lack of any useful knowledge.</p>
 
-<p>Locavore incididunt try-hard thundercats kogi. Meh aesthetic retro, chillwave gastropub stumptown culpa pop-up cred magna Carles fixie forage +1. In nihil tumblr, sunt eu Brooklyn Carles laborum delectus. Semiotics hashtag do kogi labore banh mi et exercitation polaroid cillum, lomo kitsch banjo vero. Plaid banh mi salvia, fingerstache squid sint commodo Etsy. Proident eiusmod mixtape, single-origin coffee labore ex deep v small batch nisi selfies Vice Cosby sweater. Adipisicing tempor Truffaut cray, direct trade keytar ad stumptown selvage.</p>
+<p>I started with Jekyll and and <a href='http://html5boilerplate.com/'>HTML5 Boilerplate</a> in order to get some easy niceties and see how others do things. Here I&#8217;ll explain how you can get started creating your own Jekyll blog.</p>
 
-<pre><code>In trying to better understand the logic of these opinions, I have tried to sift through some data to come up with some big picture implications for either. $ git add . -v
+<p>I will assume you have some minor experience with HTML, CSS, and the Command Line/Terminal.</p>
 
-$ git 
+<p>First you&#8217;ll need Ruby because Jekyll is a Ruby script. For Mac users, OSX comes preinstalled with Ruby. If it&#8217;s not installed, you can install it <a href='http://www.ruby-lang.org/en/downloads/'>here</a>.</p>
 
-When you look at this chart, its pretty clear that NBA Finals viewership has been in decline since Michael Jordan retired for the second time in 1999. </code></pre>
+<p>I was working with a brand new MacBook Air, so I needed to install Command Line tools, which contains GCC - something you&#8217;ll need to install Jekyll. You can either install XCode and then click Xcode &gt; Preferences &gt; Downloads, or you can download Command Line tools <a href='https://daw.apple.com/cgi-bin/WebObjects/DSAuthWeb.woa/wa/login?appIdKey=d4f7d769c2abecc664d0dadfed6a67f943442b5e9c87524d4587a95773750cea&amp;path=%2F%2Fdownloads%2Findex.action#'>directly here</a>; all you&#8217;ll need is an Apple ID.</p>
 
-<p><img src='/images/NIELSENRATINGSNBA.png' alt='NBA Finals Viewership Chart' /></p>
+<p>Once you have those items installed, you can install jekyll with:</p>
 
-<blockquote>
-<p>rganic nihil <code>farm-to-table</code> plaid wayfarers. Placeat duis pour-over 90&#8217;s. Messenger bag proident sapiente Truffaut kale chips labore. Selfies direct trade gastropub, lomo Godard lo-fi Schlitz disrupt roof party hoodie Carles. Excepteur wayfarers readymade bespoke. Adipisicing shoreditch vegan officia, freegan DIY esse. Mlkshk artisan magna, et tousled elit non reprehenderit fashion axe locavore synth banjo butcher sunt.</p>
-</blockquote>
+<pre><code>$ gem install jekyll</code></pre>
 
-<p>Bitters jean shorts Odd Future, duis Echo Park semiotics chillwave blog eu YOLO aesthetic flannel. Ullamco tousled meggings, nostrud mustache proident non et. Sriracha messenger bag blue bottle, lomo banjo nostrud tattooed. Non pour-over synth bitters. Godard YOLO ad keytar +1 anim, sapiente fashion axe seitan selfies nulla. Before they sold out cred ethnic veniam quis. Assumenda pariatur aliquip, stumptown keytar PBR sed Truffaut mumblecore Tonx pork belly put a bird on it nisi pitchfork.</p>
+<p>If you run into an error because of an outdated version of Ruby, you can update it with:</p>
 
-<p><img src='/images/Serieslength.png' alt='NBA Series Length and Rating' /></p>
+<pre><code>$ gem update --system</code></pre>
 
-<h2 id='star_power_matters'>Star Power Matters</h2>
+<p>Once you get Jekyll installed, create any project folder and then you&#8217;ll need to create the directory structure that Jekyll uses to build pages, which looks something like this:</p>
 
-<p>Organic nihil farm-to-table plaid wayfarers. Placeat</p>
+<pre><code>My Project/
+	_layouts/
+	_posts/
+	_includes/
+	_config.yml
+	index.html</code></pre>
+
+<p><code>_layouts</code>, <code>_posts</code>, and <code>_includes</code> are all folders, while <code>config.yml</code> is YAML file that Jekyll gets sitewide information from. <code>includes</code> is technically optional, but it makes it much easier to create smaller HTML files and simply include them to create cool modular layouts.</p>
+
+<p>Once you have done all that, jump into the <code>_config.yml</code> and add this stuff (replace where relevant of course):</p>
+
+<pre><code>name: &quot;Mauricio Rivera&quot;
+description: &quot;Some interesting stuff&quot;
+title: &quot;This page is Mauricio&#39;s Page&quot;
+
+url: &quot;[YOUR DOMAIN]&quot;
+
+paginate: 5
+
+markdown: maruku
+permalink: pretty
+
+authors:
+  maurrivera:
+    name: Mauricio Rivera	
+    display_name: Mauricio Rivera
+    gravatar: 
+    email: maurrivera@gmail.com
+    web: 
+    twitter: maurrivera	
+    github: maurlamf</code></pre>
+
+<p>The paginate option will generate pages and automatically paginate your stuff after whatever value you stick in there. This is useful for creating <em>loops</em>, which will allow you to spit out certain <em>tags</em> in your layout. These conventions come out of the <a href='http://wiki.shopify.com/Liquid'>Liquid</a> templating system, which was built by Shopify.</p>
+
+<p>A <em>tag</em> is like a taxonomy for your content, i.e., a tag could be &amp;bsp<code>or</code>. If we create a loop that looked like this:</p>
   </div>
       <p class="light" align="right">-10 June 2013</p>
   <h2>Recent Posts</h>
 <div>
   
-    <div><a href="/2013/06/10/building-blog-jekyll-html5boilerplate-for-noobs/">Building a Blog with Jekyll for Newbies</a></div>
+    <div><a href="/2013/06/10/building-blog-jekyll-html5boilerplate-for-noobs/">Building a Blog/Personal Page with Jekyll for Newbies</a></div>
   
     <div><a href="/2013/06/07/what-im-listening-to/">What I'm Listening To</a></div>
   
@@ -148,6 +197,8 @@ When you look at this chart, its pretty clear that NBA Finals viewership has bee
   
 </div>
 <br>
+<br>
+<div class="tweet"></div>
 <hr>
 <p class ="footer">Created by <a href="http://www.twitter.com/maurrivera">@maurrivera</a> w/ <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://html5boilerplate.com/">HTML5 boilerplate</a></p>
 </div>
