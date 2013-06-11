@@ -42,14 +42,31 @@ h1, h2, h3, h4, h5, h6 {
 h6 {
   color: #999;
 }
-
 blockquote {
-  border-left-color: #111;
+color: #3498db;
+background: #202020;
+border-left:10px solid #ccc;
+margin: 10px 10px;
+padding: 20px 10px 20px 20px;
+quotes:"\201C""\201D""\2018""\2019";
+line-height: inherit;
+line-height: 180%;
 }
-blockquote.pull-right {
-  border-right-color: #111;
+blockquote:before {
+color:#ccc;
+content:open-quote;
+font-size:4em;
+line-height: .1em;
+margin-right: .25em;
+vertical-align: -.4em;
+letter-spacing: 2px;  
 }
-
+blockquote p {
+display:inline;
+font-family: "Merriweather";
+font-size: 15px;
+line-height: 200%;
+}
 hr {
   border-bottom: px solid #202020;
 
